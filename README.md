@@ -41,7 +41,7 @@ To cut the holes, the easiest and most precise is:
 
 Once done, cut the plates along the outer lines and sand them.
 
-![Plates cut](06-plates.jpg)
+![Plates cut](img/06-plates.jpg)
 
 To build the outer walls of the case I cut bands of 6mm thick and 14mm tall walnut.
 Then I carefully cut them to match the edge of the plate.
