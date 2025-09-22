@@ -1,0 +1,105 @@
+units:
+  k: u-1
+  h: 14
+  p: 10
+points:
+  zones:
+    matrix:
+      key:
+        padding: u
+        spread: u
+      columns:
+        pinky:
+          key:
+            splay: 10
+        ring:
+          key:
+            stagger: 9
+            splay: -5
+        middle:
+          key:
+            stagger: 2.5
+            splay: -5
+        index:
+          key:
+            stagger: -2.5
+        inner:
+          key:
+            stagger: -2
+      rows:
+        bottom:
+        home:
+        top:
+    thumb:
+      key:
+        padding: u
+        spread: u
+      anchor:
+        ref: matrix_index_bottom
+        shift: [0.5u, -u-3]
+      columns:
+        inner:
+          key:
+            splay: -15
+        home:
+          key:
+            splay: -15
+            height: 1.5u
+            shift: [4,0]
+        outer:
+          key:
+            height: 1.5u
+            shift: [4,0]
+      rows:
+        cluster:
+outlines:
+  holes:
+    - what: rectangle
+      where: true
+      size: [h, h]
+  keys:
+    - what: rectangle
+      where: /^matrix_.*/
+      size: [k, k]
+    - what: rectangle
+      where: thumb_inner_cluster
+      size: [k, k]
+    - what: rectangle
+      where: /^thumb_(home|outer).*/
+      size: [k, 1.5u-1]
+  shape:
+    - what: rectangle
+      where: /^matrix_.*/
+      size: [k+p, k+p]
+    - what: rectangle
+      where: thumb_inner_cluster
+      size: [k+p, k+p]
+    - what: rectangle
+      where: /^thumb_(home|outer).*/
+      size: [k+p, 1.5u-1+p]  
+  filled:
+    - what: polygon
+      operation: stack
+      points:
+        - ref: matrix_pinky_bottom
+          shift: [-(k+p)/2, (k+p)/2]
+        - ref: thumb_home_cluster
+          shift: [-(k+p)/2,  (1.5u-1+p)/2]
+        - ref: thumb_home_cluster
+          shift: [-(k+p)/2, -(1.5u-1+p)/2]
+        - ref: thumb_inner_cluster
+          shift: [-(k+p)/2, -(k+p)/2]
+        - ref: matrix_pinky_bottom
+          shift: [(k+p)/2, -(k+p)/2]
+  plate:
+    - name: shape
+    - operation: add
+      name: filled
+    - operation: subtract
+      name: holes
+  tester:
+    - name: shape
+    - operation: add
+      name: filled
+    - operation: subtract
+      name: keys
