@@ -81,3 +81,5 @@ Solder the rest.
 Flash the Arduino Pro Micros with the [firmware](https://github.com/cbosdo/my_qmk/tree/main/keyboards/handwired/minidox) if not reusing the ones from the prototype.
 
 ![Sitting on my desk](img/12-done.jpg)
+![In the transport case](img/13-case.jpg)
+![In the opened transport case](img/14-case-opened.jpg)
