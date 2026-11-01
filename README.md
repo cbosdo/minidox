@@ -1,5 +1,15 @@
 This is the build log of my handwired 3x5+5 keyboard.
 
+## Motivation
+
+This project started after using a 70 keys split keyboard for a few years and feeling some pain as it was too big.
+Here are some links about tha primary keyboard build as the technique has been reused and refined:
+
+* [Redox keyboard build with wooden case](https://www.instructables.com/Redox-Keyboard-With-Wooden-Case/)
+* [Wooden keycaps using hand tools](https://www.instructables.com/Wooden-Keycaps-Using-Hand-Tools)
+
+The case build is different because I wanted the new keyboard to be less bulky and have a flat top surface to easily wipe dust from it.
+
 ## Prototyping
 
 First remove keycaps and adjust the QMK firmware to come close to the target keyboard.
